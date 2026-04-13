@@ -20,6 +20,8 @@ copy .env.example .env
 python scripts/smoke_bill_consume.py
 ```
 
+**Dev server (porta 3005):** `python -m uvicorn dev_app:app --host 127.0.0.1 --port 3005 --reload` — ou use o script do guarda-chuva `bidnoculus_lancto/scripts/start-mvp-stack.ps1`.
+
 Em rotas do Core que criem/reativem perfil, importar `consume_credits` e passar o **JWT do utilizador** (recomendado) ou um token de serviço gerado com o mesmo `JWT_SECRET` que o Bill.
 
 ## Variáveis (alinhamento Bill)
